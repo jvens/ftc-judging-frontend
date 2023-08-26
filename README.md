@@ -1,4 +1,6 @@
 # essentials
+[![Build and Test](https://github.com/jvens/ftc-judging-frontend/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/jvens/ftc-judging-frontend/actions/workflows/node.js.yml)
+[![codecov](https://codecov.io/gh/jvens/ftc-judging-frontend/graph/badge.svg?token=K2PERKZDAN)](https://codecov.io/gh/jvens/ftc-judging-frontend)
 
 ## Project setup
 

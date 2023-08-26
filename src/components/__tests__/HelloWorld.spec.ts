@@ -26,6 +26,22 @@ describe('HelloWorld Component', () => {
         plugins: [vuetify]
       }
     })
-    expect(wrapper.text()).toContain('Welcome')
+    expect(wrapper.text()).toContain('hello world')
+  })
+
+  it('Button chnages text', async () => {
+    const wrapper = mount({ template: '<v-layout><HelloWorld/></v-layout>' }, {
+      props: {},
+      global: {
+        components: {
+          HelloWorld
+        },
+        plugins: [vuetify]
+      }
+    })
+    const btn = wrapper.find('button')
+    expect(btn.exists()).toBe(true)
+    await btn.trigger("click")
+    expect(wrapper.text()).toContain('btn clicked')
   })
 })
