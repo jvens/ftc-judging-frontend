@@ -7,7 +7,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix --ignore-path .gitignore",
-    "test:unit": "vitest --environment jsdom"
+    "test:unit": "vitest --environment jsdom --coverage"
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
@@ -24,6 +24,7 @@
     "@types/node": "^18.15.0",
     "@types/webfontloader": "^1.6.35",
     "@vitejs/plugin-vue": "^4.0.0",
+    "@vitest/coverage-v8": "^0.34.3",
     "@vue/eslint-config-typescript": "^11.0.0",
     "@vue/test-utils": "^2.4.1",
     "eslint": "^8.37.0",

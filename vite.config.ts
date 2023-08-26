@@ -43,6 +43,10 @@ export default defineConfig({
     environment: 'jsdom',
     deps: {
       inline: ['vuetify']
+    },
+    coverage: {
+      reporter: ['json', 'html'],
+
     }
   }
 })
