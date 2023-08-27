@@ -1,21 +1,64 @@
 // Composables
-import { createRouter, createWebHistory } from 'vue-router'
+import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router'
 
-const routes = [
+import PlaceholderView from '@/views/PlaceholderView.vue'
+
+const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: () => import('@/layouts/default/Default.vue'),
-    children: [
-      {
-        path: '',
-        name: 'Home',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
-      },
-    ],
+    name: 'Home',
+    component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
   },
+  {
+    path: '/event',
+    name: 'Event Home',
+    component: PlaceholderView, //() => import(/* webpackChunkName: "event" */ '@/views/EventHome'),
+  },
+  {
+    path: '/event/selections',
+    name: 'Award Selections',
+    component: PlaceholderView,
+  },
+  {
+    path: '/event/observation',
+    name: 'Match Observation',
+    component: PlaceholderView,
+  },
+  {
+    path: '/event/teams',
+    name: 'Teams',
+    component: PlaceholderView,
+  },
+  {
+    path: '/event/server',
+    name: 'FTC Live Server',
+    component: PlaceholderView,
+  },
+  {
+    path: '/event/settings',
+    name: 'Event Settings',
+    component: PlaceholderView,
+  },
+  {
+    path: '/admin',
+    name: 'Admin',
+    component: PlaceholderView,
+  },
+  {
+    path: '/admin/db',
+    name: 'Database',
+    component: PlaceholderView,
+  },
+  {
+    path: '/admin/server',
+    name: 'Server Logs',
+    component: PlaceholderView,
+  },
+  {
+    path: '/admin/client',
+    name: 'Client Logs',
+    component: PlaceholderView,
+  }
 ]
 
 const router = createRouter({
