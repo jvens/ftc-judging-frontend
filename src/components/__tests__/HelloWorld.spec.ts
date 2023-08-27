@@ -17,25 +17,19 @@ global.ResizeObserver = require('resize-observer-polyfill')
 
 describe('HelloWorld Component', () => {
   it('renders properly', () => {
-    const wrapper = mount({ template: '<v-layout><HelloWorld/></v-layout>' }, {
+    const wrapper = mount(HelloWorld, {
       props: {},
       global: {
-        components: {
-          HelloWorld
-        },
         plugins: [vuetify]
       }
     })
     expect(wrapper.text()).toContain('hello world')
   })
 
-  it('Button chnages text', async () => {
-    const wrapper = mount({ template: '<v-layout><HelloWorld/></v-layout>' }, {
+  it('Button changes text', async () => {
+    const wrapper = mount(HelloWorld, {
       props: {},
       global: {
-        components: {
-          HelloWorld
-        },
         plugins: [vuetify]
       }
     })
