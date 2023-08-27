@@ -46,7 +46,8 @@ export default defineConfig({
     },
     coverage: {
       reporter: ['json', 'html'],
-
+      all: true,
+      exclude: ['**/node_modules/**', '**/dist/**', '**/coverage/**', '.vscode/**', '*.ts', '*.js', 'src/plugins/**'],
     }
   }
 })
